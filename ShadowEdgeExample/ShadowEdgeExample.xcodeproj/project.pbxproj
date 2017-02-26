@@ -70,6 +70,7 @@
 		CE3A0C431E62D00500E1FDE1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CE3A0C451E62D00500E1FDE1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CE3A0C701E62D07600E1FDE1 /* ShadowEdge.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ShadowEdge.xcodeproj; path = ShadowEdge/ShadowEdge.xcodeproj; sourceTree = "<group>"; };
+		CE3A0C891E62D47D00E1FDE1 /* Playground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Playground.playground; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +88,7 @@
 		CE3A0C2D1E62D00500E1FDE1 = {
 			isa = PBXGroup;
 			children = (
+				CE3A0C891E62D47D00E1FDE1 /* Playground.playground */,
 				CE3A0C4B1E62D05C00E1FDE1 /* LIbrary */,
 				CE3A0C381E62D00500E1FDE1 /* ShadowEdgeExample */,
 				CE3A0C371E62D00500E1FDE1 /* Products */,
