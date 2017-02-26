@@ -91,7 +91,9 @@
 				CE3A0C381E62D00500E1FDE1 /* ShadowEdgeExample */,
 				CE3A0C371E62D00500E1FDE1 /* Products */,
 			);
+			indentWidth = 2;
 			sourceTree = "<group>";
+			tabWidth = 2;
 		};
 		CE3A0C371E62D00500E1FDE1 /* Products */ = {
 			isa = PBXGroup;
