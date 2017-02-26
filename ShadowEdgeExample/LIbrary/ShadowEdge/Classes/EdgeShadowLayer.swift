@@ -8,53 +8,43 @@
 
 import Foundation
 
-class EdgeShadowLayer: CAShapeLayer {
+public class EdgeShadowLayer: CAShapeLayer {
   
-  var maskLayer: CAShapeLayer = CAShapeLayer()
+  private var maskLayer: CAShapeLayer = CAShapeLayer()
   
-  var edge:UIShadowSide? = [.allEdges] {
+  public var edge:UIShadowEdge = [.allEdges] {
     didSet {
-      updateMask()
+      self.setNeedsLayout()
     }
   }
   
-  var corner:UIRectCorner = .allCorners {
+  public var corner:UIRectCorner = .allCorners {
     didSet {
-      update()
+      self.setNeedsLayout()
     }
   }
   
-  override var cornerRadius: CGFloat {
+  override public var cornerRadius: CGFloat {
     didSet {
-      update()
+      self.setNeedsLayout()
     }
   }
   
-  override init() {
-    super.init()
-    update()
-  }
-  
-  required init?(coder aDecoder: NSCoder) {
+  required public init?(coder aDecoder: NSCoder) {
     fatalError("init(coder:) has not been implemented")
   }
   
-  override func layoutSublayers() {
+  override public func layoutSublayers() {
     super.layoutSublayers()
     update()
   }
   
-  func update() {
+  private func update() {
     self.path = UIBezierPath(roundedRect: self.bounds, byRoundingCorners: corner, cornerRadii: CGSize(width: cornerRadius, height: cornerRadius)).cgPath
     updateMask()
   }
   
   private func updateMask() {
-    
-    guard let edge = edge else {
-      self.mask = nil
-      return
-    }
     
     var maskFrame = self.bounds
     
