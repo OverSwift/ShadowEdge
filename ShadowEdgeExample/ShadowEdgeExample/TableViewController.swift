@@ -93,10 +93,12 @@ class TableViewController: UITableViewController {
   
   // Override to support rearranging the table view.
   override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-    tableView.moveRow(at: fromIndexPath, to: to)
-    tableView.indexPathsForVisibleRows?.forEach({ (indexPath) in
-      self.updateCellShadow(at: indexPath)
-    })
+    
+    DispatchQueue.main.async {
+      tableView.indexPathsForVisibleRows?.forEach({ (indexPath) in
+        self.updateCellShadow(at: indexPath)
+      })
+    }
   }
   
   private func updateCellShadow(at indexPath: IndexPath) {
@@ -112,6 +114,7 @@ class TableViewController: UITableViewController {
       cell.shadowEdge = [.rightEdge, .leftEgge]
       cell.shadowLayer.corner = nil
     }
+    cell.setNeedsLayout()
   }
   
   // Override to support conditional rearranging of the table view.
