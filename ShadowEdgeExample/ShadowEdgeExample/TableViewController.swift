@@ -21,7 +21,7 @@ class TableViewController: UITableViewController {
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     self.tableView.estimatedRowHeight = 44
-    self.tableView.rowHeight = UITableViewAutomaticDimension
+    self.tableView.rowHeight = UITableView.automaticDimension
   }
   
   
