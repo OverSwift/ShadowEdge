@@ -52,13 +52,13 @@ class TableViewController: UITableViewController {
     
     let rowsCount = tableView.numberOfRows(inSection: indexPath.section)
     if indexPath.row == 0 {
-      cell.shadowEdge = [.leftEgge, .topEdge, .rightEdge]
+      cell.shadowEdge = [.left, .top, .right]
       cell.shadowLayer.corner = [.topLeft, .topRight]
     } else if indexPath.row == rowsCount - 1 {
-      cell.shadowEdge = [.leftEgge, .bottomEdge, .rightEdge]
+      cell.shadowEdge = [.left, .bottom, .right]
       cell.shadowLayer.corner = [.bottomLeft, .bottomRight]
     } else {
-      cell.shadowEdge = [.rightEdge, .leftEgge]
+      cell.shadowEdge = [.right, .left]
       cell.shadowLayer.corner = nil
     }
     
@@ -105,13 +105,13 @@ class TableViewController: UITableViewController {
     guard var cell = tableView.cellForRow(at: indexPath) as? TableViewCell else { return }
     let rowsCount = tableView.numberOfRows(inSection: indexPath.section)
     if indexPath.row == 0 {
-      cell.shadowEdge = [.leftEgge, .topEdge, .rightEdge]
+      cell.shadowEdge = [.left, .top, .right]
       cell.shadowLayer.corner = [.topLeft, .topRight]
     } else if indexPath.row == rowsCount - 1 {
-      cell.shadowEdge = [.leftEgge, .bottomEdge, .rightEdge]
+      cell.shadowEdge = [.left, .bottom, .right]
       cell.shadowLayer.corner = [.bottomLeft, .bottomRight]
     } else {
-      cell.shadowEdge = [.rightEdge, .leftEgge]
+      cell.shadowEdge = [.right, .left]
       cell.shadowLayer.corner = nil
     }
     cell.setNeedsLayout()

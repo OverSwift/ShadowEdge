@@ -12,7 +12,7 @@ public struct UIShadowEdge : OptionSet {
   
   public typealias RawValue = UInt
   
-  private var value:UInt
+  private var value: UInt
   
   public init(rawValue: UInt){
     value = rawValue
@@ -22,9 +22,9 @@ public struct UIShadowEdge : OptionSet {
     return value
   }
   
-  public static let topEdge: UIShadowEdge = UIShadowEdge(rawValue: 1 << 0)
-  public static let rightEdge: UIShadowEdge = UIShadowEdge(rawValue: 1 << 1)
-  public static let bottomEdge: UIShadowEdge = UIShadowEdge(rawValue: 1 << 2)
-  public static let leftEgge: UIShadowEdge = UIShadowEdge(rawValue: 1 << 3)
-  public static let allEdges: UIShadowEdge = UIShadowEdge.topEdge.union(UIShadowEdge.rightEdge).union(UIShadowEdge.bottomEdge).union(UIShadowEdge.leftEgge)
+  public static let top: UIShadowEdge = UIShadowEdge(rawValue: 1 << 0)
+  public static let right: UIShadowEdge = UIShadowEdge(rawValue: 1 << 1)
+  public static let bottom: UIShadowEdge = UIShadowEdge(rawValue: 1 << 2)
+  public static let left: UIShadowEdge = UIShadowEdge(rawValue: 1 << 3)
+  public static let all: UIShadowEdge = [.top, .bottom, .right, .left]
 }

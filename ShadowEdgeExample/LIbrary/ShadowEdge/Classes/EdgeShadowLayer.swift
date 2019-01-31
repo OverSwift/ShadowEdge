@@ -37,7 +37,7 @@ public extension EdgeShadowView {
 public class EdgeShadowLayer: CAShapeLayer {
   
   private var maskLayer: CAShapeLayer = CAShapeLayer()
-  public var edge: UIShadowEdge = [.allEdges]
+  public var edge: UIShadowEdge = [.all]
   public var corner: UIRectCorner?
   
   override init() {
@@ -91,29 +91,29 @@ public class EdgeShadowLayer: CAShapeLayer {
     var maskFrame = self.bounds
     var shadowFrame = self.bounds
     
-    if edge.contains(.topEdge) {
+    if edge.contains(.top) {
       maskFrame.origin.y -= (self.shadowRadius * 10)
       maskFrame.size.height += self.shadowRadius * 10
     }
     
-    if edge.contains(.leftEgge) {
+    if edge.contains(.left) {
       maskFrame.origin.x -= (self.shadowRadius * 10)
       maskFrame.size.width += self.shadowRadius * 10
     }
     
-    if edge.contains(.rightEdge) {
+    if edge.contains(.right) {
       maskFrame.size.width += self.shadowRadius * 10
     }
     
-    if edge.contains(.bottomEdge) {
+    if edge.contains(.bottom) {
       maskFrame.size.height += self.shadowRadius * 10
     }
     
-    if edge.contains(.rightEdge) && edge.contains(.leftEgge) {
-      if !edge.contains(.topEdge) {
+    if edge.contains(.right) && edge.contains(.left) {
+      if !edge.contains(.top) {
         shadowFrame.origin.y -= self.shadowRadius * 2
       }
-      if !edge.contains(.bottomEdge) {
+      if !edge.contains(.bottom) {
         shadowFrame.size.height += self.shadowRadius * 4
       } else {
         shadowFrame.size.height += self.shadowRadius * 2
