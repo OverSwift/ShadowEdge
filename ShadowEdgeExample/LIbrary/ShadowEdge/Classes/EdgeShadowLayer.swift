@@ -87,7 +87,6 @@ public class EdgeShadowLayer: CAShapeLayer {
   }
   
   private func updateMask() {
-    print("Update mask")
     var maskFrame = self.bounds
     var shadowFrame = self.bounds
     

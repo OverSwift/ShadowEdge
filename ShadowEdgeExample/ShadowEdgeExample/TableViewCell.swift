@@ -22,7 +22,6 @@ class TableViewCell: UITableViewCell, EdgeShadowView {
     self.shadowLayer.shadowOpacity = 1.0
     self.shadowLayer.masksToBounds = false
     self.shadowLayer.shadowRadius = 12
-    self.shadowLayer.cornerRadius = 10
   }
   
   override func layoutSubviews() {
