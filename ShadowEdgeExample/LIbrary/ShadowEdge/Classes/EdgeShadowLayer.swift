@@ -90,22 +90,23 @@ public class EdgeShadowLayer: CAShapeLayer {
     var maskFrame = self.bounds
     var shadowFrame = self.bounds
     
+    let assignValue = self.shadowRadius * 10
     if edge.contains(.top) {
-      maskFrame.origin.y -= (self.shadowRadius * 10)
-      maskFrame.size.height += self.shadowRadius * 10
+      maskFrame.origin.y -= assignValue
+      maskFrame.size.height += assignValue
     }
     
     if edge.contains(.left) {
-      maskFrame.origin.x -= (self.shadowRadius * 10)
-      maskFrame.size.width += self.shadowRadius * 10
+      maskFrame.origin.x -= assignValue
+      maskFrame.size.width += assignValue
     }
     
     if edge.contains(.right) {
-      maskFrame.size.width += self.shadowRadius * 10
+      maskFrame.size.width += assignValue
     }
     
     if edge.contains(.bottom) {
-      maskFrame.size.height += self.shadowRadius * 10
+      maskFrame.size.height += assignValue
     }
     
     if edge.contains(.right) && edge.contains(.left) {
